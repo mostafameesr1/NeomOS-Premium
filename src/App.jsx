@@ -1,8 +1,8 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import ROMPage from "./pages/ROMPage"; // صفحة كل ROM
+import ROMPage from "./pages/ROMPage";
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Routes>
@@ -12,5 +12,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
