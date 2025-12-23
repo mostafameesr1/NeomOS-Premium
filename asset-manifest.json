@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NeomOS-Premium/static/css/main.9f5415ce.css",
+    "main.js": "/NeomOS-Premium/static/js/main.6c8da74f.js",
+    "index.html": "/NeomOS-Premium/index.html",
+    "main.9f5415ce.css.map": "/NeomOS-Premium/static/css/main.9f5415ce.css.map",
+    "main.6c8da74f.js.map": "/NeomOS-Premium/static/js/main.6c8da74f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f5415ce.css",
+    "static/js/main.6c8da74f.js"
+  ]
+}
