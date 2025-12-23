@@ -1,37 +1,52 @@
-name: Build & Deploy NeomOS
+name: Build & Deploy NeomOS-Premium
 
 on:
   push:
-    branches: [ main ]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches:
+      - main  # الفرع الرئيسي
+  workflow_dispatch:
 
 jobs:
   build:
+    name: Build Project
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v4
+      # خطوات بناء المشروع حسب NeomOS-Premium
+      # لو المشروع Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: '18'
 
-      - run: npm install
-      - run: npm run build
+      - name: Install dependencies
+        run: npm install
 
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Build project
+        run: npm run build  # تأكد أن هذا السكربت موجود في package.json
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
         with:
-          path: dist
+          name: github-pages
+          path: ./dist  # مجلد البناء الناتج من المشروع
 
   deploy:
-    needs: build
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-
+    needs: build
+    environment:
+      name: github-pages   # تصحيح الخطأ المهم
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: github-pages
+          path: ./site
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+        with:
+          path: ./site
