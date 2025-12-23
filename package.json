@@ -1,8 +1,22 @@
 {
   "name": "neomos",
   "version": "1.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "build": "node scripts/build.js"
-  }
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "gh-pages": "^5.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2",
+    "postcss": "^8.4.23",
+    "autoprefixer": "^10.4.14"
+  },
+  "homepage": "https://mostafameesr1.github.io/NeomOS-Premium"
 }
