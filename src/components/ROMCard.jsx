@@ -27,11 +27,6 @@ export default function ROMCard({ rom, index }) {
           View ROM
         </Link>
       </div>
-
-      {/* Footer */}
-      <div className="bg-gray-900/30 text-gray-500 text-xs text-center py-2">
-        © NeomOS
-      </div>
     </div>
   );
 }
