@@ -37,4 +37,30 @@ fs.readdirSync(romsDir).forEach(file => {
   fs.writeFileSync(path.join(outputDir, file.replace(".json", ".html")), finalHtml);
 });
 
+// بعد loop على ROMs
+// توليد index.html
+const romLinks = fs.readdirSync(outputDir)
+  .map(f => `<li><a href="roms/${f}">${f.replace(".html","")}</a></li>`)
+  .join("");
+
+const indexContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NeomOS-Premium</title>
+</head>
+<body>
+  <h1>NeomOS ROMs</h1>
+  <ul>
+    ${romLinks}
+  </ul>
+</body>
+</html>
+`;
+
+fs.writeFileSync(path.join(dist, "index.html"), indexContent);
+
+console.log("index.html created in dist");
+
 console.log("NeomOS build completed");
