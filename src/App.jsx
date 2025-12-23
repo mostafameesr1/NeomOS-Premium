@@ -1,18 +1,15 @@
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import ROMPage from "./pages/ROMPage";
 
-export default function App() {
+function App() {
   return (
-    <>
-      <Navbar />
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/rom/:id" element={<ROMPage />} />
+        {/* يمكنك إضافة صفحات ROM هنا */}
       </Routes>
-      <Footer />
-    </>
+    </Router>
   );
 }
+
+export default App;
