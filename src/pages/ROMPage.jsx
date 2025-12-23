@@ -11,7 +11,7 @@ export default function ROMPage() {
     <div className="bg-[#0b0b0b] text-white min-h-screen p-6">
       <div className="max-w-4xl mx-auto">
 
-        <img src={rom.image} className="rounded-xl mb-6" />
+        <img src={rom.image} alt={rom.name} className="rounded-xl mb-6" />
 
         <h1 className="text-3xl font-bold">{rom.name}</h1>
         <p className="text-gray-400 mt-1">{rom.version}</p>
@@ -20,6 +20,7 @@ export default function ROMPage() {
         <a
           href={rom.download}
           target="_blank"
+          rel="noreferrer"
           className="inline-block mt-6 bg-green-600 px-6 py-3 rounded font-semibold"
         >
           Download ROM
