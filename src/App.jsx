@@ -1,12 +1,17 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import ROMPage from "./pages/ROMPage";
 
 export default function App() {
   return (
     <>
       <Navbar />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rom/:id" element={<ROMPage />} />
+      </Routes>
       <Footer />
     </>
   );
