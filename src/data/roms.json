@@ -1,27 +1,16 @@
 [
   {
-    "name": "CrazyXNeom",
-    "version": "Beta V1 - 3.0.9.0 CN",
+    "name": "CrazyXNeom Beta V1",
+    "version": "3.0.9.0 CN",
     "android": "Android 16",
-    "released": "19/11/2025",
-    "device": "Xiaomi Device",
-    "image": "/NeomOS-Premium/images/placeholder1.png",
-    "download": "https://pixeldrain.com/u/QQFYq9Ez",
+    "image": "/NeomOS-Premium/images/placeholder.png",
     "notes": [
       "Initial build (HyperOS 3)",
-      "Added FM Radio",
-      "Added Dolby Atmos App",
-      "Enable Advanced Textures after install",
-      "No 120Hz issue after reboot"
+      "Added Fm Radio",
+      "Added Dolby Atoms App"
     ],
-    "bugs": [
-      "Low brightness"
-    ],
-    "credits": [
-      "MiDoNaSR",
-      "iputobject",
-      "kakashi1v1",
-      "clasky_404"
-    ]
+    "bugs": ["Low brightness"],
+    "credits": ["MiDoNaSR", "iputobject", "kakashi1v1", "clasky_404"],
+    "download": "https://pixeldrain.com/u/QQFYq9Ez"
   }
 ]
