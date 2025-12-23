@@ -6,3 +6,4 @@
     Custom ROMs for Android 16 & HyperOS Builds
   </p>
 </div>
+export default Home;
