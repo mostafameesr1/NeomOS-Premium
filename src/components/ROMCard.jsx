@@ -2,22 +2,43 @@ import { Link } from "react-router-dom";
 
 export default function ROMCard({ rom, index }) {
   return (
-    <div className="border rounded-lg p-4 shadow hover:shadow-lg transition">
+    <div className="bg-[#111] text-white rounded-xl overflow-hidden shadow-lg hover:scale-[1.02] transition">
+      
       <img
         src={rom.image}
-        alt={rom.title}
-        className="w-full h-48 object-cover mb-2 rounded"
+        alt={rom.name}
+        className="w-full h-44 object-cover"
       />
 
-      <h2 className="font-bold text-lg">{rom.title}</h2>
-      <p>{rom.android}</p>
+      <div className="p-4 space-y-2">
+        <h2 className="text-xl font-bold">{rom.name}</h2>
 
-      <Link
-        to={`/rom/${index}`}
-        className="text-blue-500 hover:underline mt-2 block"
-      >
-        View ROM
-      </Link>
+        <p className="text-sm text-gray-400">
+          {rom.version}
+        </p>
+
+        <p className="text-sm">
+          {rom.android}
+        </p>
+
+        <div className="flex justify-between items-center mt-3">
+          <Link
+            to={`/rom/${index}`}
+            className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-sm"
+          >
+            View
+          </Link>
+
+          <a
+            href={rom.download}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-green-400 hover:underline"
+          >
+            Download
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
