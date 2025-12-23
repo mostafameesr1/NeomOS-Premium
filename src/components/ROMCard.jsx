@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function ROMCard({ rom, index }) {
   return (
     <div className="bg-[#0f0f0f] rounded-2xl overflow-hidden border border-gray-800 shadow-lg hover:scale-[1.02] transition">
-      
+
       <div className="relative">
         <img
           src={rom.image}
